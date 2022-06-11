@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
     </head>
     <body>
-        <button name="botao" id="botao" onclick="funcao()">botao</button>
+        <div class="container">
+            <div class="body">
+                <h1>Parabéns!</h1>
+                <p>Você concluiu o curso com sucesso.</p>
+                <p>Diz pra gente: qual nome você deseja inserir no seu certificado?</p>
+                <fieldset>
+                    <legend>Nome</legend>
+                    <form>
+                        <input type="text" name="name" id="name" placeholder="Insira seu nome aqui" maxlength="30">
+                        <input type="submit" name="emitir" id="emitir" value="Emitir Certificado" onclick="funcao()">
+                    </form>
+                </fieldset>
+                <p><img src="logo.png"></p>
+            </div>
+        </div>
+        <!-- <button name="botao" id="botao" onclick="funcao()">botao</button> -->
     </body>
     <script>
         function funcao() {
+            var nameValue = document.getElementById("name").value;
+
             var doc = new jsPDF({
                 orientation: "landscape"
             })
@@ -22,7 +41,7 @@
             doc.setFontType('italic')
             doc.setFontSize(48)
         
-            doc.text("Eduardo Scaranari Tessmer", 30, 93)
+            doc.text(nameValue, 25, 93)
             doc.save("certificado.pdf")
         }
     </script>

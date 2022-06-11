@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    height: 100%;
+    /* background-image: linear-gradient(to bottom right, rgb(22, 27, 85), rgb(148, 4, 161)); */
+}
+
+.container {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+fieldset {
+    border-radius: 5px;
+    border-color: orange;
+}
+
+h1 {
+    color: orange;
+}
+
+legend {
+    padding: 0 8px;
+}
+
+p, legend {
+    color: black;
+}
+
+h1, p {
+    width: 100%;
+    text-align: center;
+}
+
+input {
+    border-radius: 5px;
+    border-width: 1px;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    width: 70%;
+    display: inline-block;
+    border-color: orange;
+    padding: 4px 10px;
+}
+
+input[type="submit"] {
+    box-sizing: border-box;
+    width: 29%;
+    display: inline-block;
+    margin: auto;
+    background-color: orange;
+    color: white;
+    border-color: orange;
+    transition-duration: 0.3s;
+    padding: 4px 0;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    font-weight: 600;
+    color: orange;
+    background-color: white;
+    transition-duration: 0.3s;
+}
+
+img {
+    width: 100px;
+    margin-top: 50px;
+}

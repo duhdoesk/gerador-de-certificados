@@ -6,7 +6,6 @@
 
 html {
     height: 100%;
-    /* background-image: linear-gradient(to bottom right, rgb(22, 27, 85), rgb(148, 4, 161)); */
 }
 
 .container {
@@ -70,10 +69,31 @@ input[type="submit"]:hover {
     font-weight: 600;
     color: orange;
     background-color: white;
-    transition-duration: 0.3s;
+    transition-duration: 0.5s;
 }
 
 img {
     width: 100px;
     margin-top: 50px;
+}
+
+@media (max-width: 800px) {
+    input[type="text"] {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        border-color: orange;
+        padding: 4px 10px;
+    }
+    input[type="submit"] {
+        display: block;
+        width: 200px;
+        margin: auto;
+        margin-top: 8px;
+        text-align: center;
+        background-color: orange;
+        color: white;
+        border-color: orange;
+        transition-duration: 0.3s;
+    }
 }

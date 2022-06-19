@@ -24,12 +24,12 @@
         <div class="body">
             <h1>Parabéns!</h1>
             <p>Você concluiu o curso com sucesso.</p>
-            <p>Diz pra gente: qual nome você deseja inserir no seu certificado?</p>
+            <p><span id="spanCPF">Valide seu CPF </span>no formulário abaixo para fazer o download do seu certificado.</p>
             <fieldset>
-                <legend>Nome</legend>
+                <legend>Identificação</legend>
                 <form>
-                    <input type="text" name="name" id="name" placeholder="Insira seu nome aqui" maxlength="30">
-                    <input type="submit" name="emitir" id="emitir" value="Emitir Certificado" onclick="funcao()">
+                    <input type="number" name="cpf" id="cpf" placeholder="Insira seu cpf - somente números" step="10">
+                    <input type="button" name="emitir" id="emitir" value="Emitir Certificado" onclick="funcao()">
                 </form>
             </fieldset>
             <p><img src="img/logo.png"></p>
@@ -39,4 +39,5 @@
 </body>
 <script src="js/index.js"></script>
 <script src="js/base64.js"></script>
+<script src="js/jsonHelper.js"></script>
 </html>

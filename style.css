@@ -26,6 +26,10 @@ h1 {
     color: orange;
 }
 
+#spanCPF {
+    font-weight: 700;
+}
+
 legend {
     padding: 0 8px;
 }
@@ -44,15 +48,21 @@ input {
     border-width: 1px;
 }
 
-input[type="text"] {
+input[type="number"] {
     box-sizing: border-box;
     width: 70%;
     display: inline-block;
     border-color: orange;
     padding: 4px 10px;
+    text-align: center;
+    font-size: 1em;
 }
 
-input[type="submit"] {
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+input[type="button"] {
     box-sizing: border-box;
     width: 29%;
     display: inline-block;
@@ -62,9 +72,10 @@ input[type="submit"] {
     border-color: orange;
     transition-duration: 0.3s;
     padding: 4px 0;
+    font-size: 1em;
 }
 
-input[type="submit"]:hover {
+input[type="button"]:hover {
     cursor: pointer;
     font-weight: 600;
     color: orange;
@@ -78,14 +89,14 @@ img {
 }
 
 @media (max-width: 800px) {
-    input[type="text"] {
+    input[type="number"] {
         box-sizing: border-box;
         width: 100%;
         display: flex;
         border-color: orange;
         padding: 4px 10px;
     }
-    input[type="submit"] {
+    input[type="button"] {
         display: block;
         width: 200px;
         margin: auto;

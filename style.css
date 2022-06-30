@@ -48,7 +48,7 @@ input {
     border-width: 1px;
 }
 
-input[type="number"] {
+input[type="text"] {
     box-sizing: border-box;
     width: 70%;
     display: inline-block;
@@ -58,7 +58,7 @@ input[type="number"] {
     font-size: 1em;
 }
 
-input[type=number]::-webkit-inner-spin-button { 
+input[type=text]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
 }
 
@@ -89,7 +89,7 @@ img {
 }
 
 @media (max-width: 800px) {
-    input[type="number"] {
+    input[type="text"] {
         box-sizing: border-box;
         width: 100%;
         display: flex;

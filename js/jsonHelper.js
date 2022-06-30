@@ -9,10 +9,3 @@ function readTextFile(file, callback) {
     }
     rawFile.send(null);
 }
-
-/*
-readTextFile("data/data.json", function(text){
-    var data = JSON.parse(text);
-    console.log(data);
-});
-*/

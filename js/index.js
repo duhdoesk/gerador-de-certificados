@@ -1,15 +1,15 @@
-const campoCPF = document.querySelector('#cpf');
+const campoEmail = document.querySelector('#email');
 const botaoEmitir = document.querySelector('#emitir');
 
 function funcao() {
-    const cpfValue = document.getElementById("cpf").value;
+    const emailValue = document.getElementById("email").value;
     
     readTextFile("data/data.json", function(text){
         let dados = JSON.parse(text);
         let match = false;
         
         for (i of dados) {
-            if (i.cpf == cpfValue) {
+            if (i.email == emailValue) {
                 gerarPDF(i.nome);
                 match = true;
                 break;
@@ -17,11 +17,11 @@ function funcao() {
         };
 
         if (!match) {
-            alert('Desculpe, CPF não localizado no banco de dados do curso.');
+            alert('Desculpe, endereço de e-mail não localizado no banco de dados do curso.');
         };
 
-        campoCPF.value = '';
-        campoCPF.focus();
+        campoEmail.value = '';
+        campoEmail.focus();
     })
 }
 
@@ -37,5 +37,5 @@ function gerarPDF(nome) {
     doc.setFontSize(48);
 
     doc.text(nome, 25, 93);
-    doc.save("certificado.pdf");
+    doc.save("certificado-acelerador.pdf");
 }

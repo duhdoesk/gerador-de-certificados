@@ -34,8 +34,9 @@ function gerarPDF(nome) {
 
     doc.setFont("times");
     doc.setFontType('italic');
-    doc.setFontSize(48);
+    doc.setFontSize(24);
 
-    doc.text(nome, 25, 93);
-    doc.save("certificado-acelerador.pdf");
+    doc.text(nome, 89, 86);
+    doc.text("12/05/2024", 130, 160)
+    doc.save("certificado-cse.pdf");
 }
